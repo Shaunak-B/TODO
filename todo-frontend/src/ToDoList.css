@@ -14,28 +14,31 @@ ul{
 li{
     display: flex;
     justify-content: space-between;
-    background:lightslategray;
+    background:rgb(125, 228, 171);
     font-size: 25px;
     font-weight: 600;
     color: black;
     padding: 15px 15px 15px 10px;
     border-bottom: 1px solid black;
     border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 0 10px rgb(143, 138, 138)
 }
 
 .line-through{
     text-decoration: line-through;
-    color: green;
 }
 
 .red{
     color: red;
 }
 
-.blue{
-    color: dodgerblue
+.grey{
+    color: grey(9, 59, 109)
 }
 
 .green{
-    color: yellowgreen;
+    color: rgb(31, 207, 24);
 }

@@ -42,6 +42,22 @@ function CreateTodo() {
         }
     }
 
+    const deleteTodo = (i)=>{
+        swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this file",
+            icon: "warning",
+            buttons: true,
+            dangermode: true
+        }).then(res =>{
+            if(res){
+                todos.splice(i,1)
+                localStorage.setItem('todos', JSON.stringify(todos))
+                setTodoArr(todos)
+            }
+        })
+    }
+
     return (
        <> 
             <div className = "box">
@@ -56,7 +72,7 @@ function CreateTodo() {
                     <button className = "toDoButton" type="button" name="addToDo" onClick={createTodo}>Add ToDo</button>  
                 </div>
             </div>
-            <ToDoList todoArr = {todoArr} completeTodo={completeTodo}/>
+            <ToDoList todoArr = {todoArr} completeTodo={completeTodo} deleteTodo={deleteTodo}/>
         </>    
     );
 }
